@@ -37,3 +37,7 @@ while True:
         if event.type == pygame.QUIT:
             exit()
     clock.tick(FPS)
+
+
+# a = 10
+print(f'Переменная a равняется {a}')
