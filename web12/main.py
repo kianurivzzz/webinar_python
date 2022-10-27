@@ -11,6 +11,7 @@ def create_ball(group):
     return Ball(x, balls_data[index]['path'],
                 balls_data[index]['score'], speed, group)
 
+
 game_score = 0
 
 def colide_balls():
@@ -47,13 +48,13 @@ score_font = pygame.font.SysFont('arial', 30)
 
 balls_group = pygame.sprite.Group()
 balls_data = ({'path': 'web12/img/ball_rabbit.png', 'score': 100},
-               {'path': 'web12/img/ball_lemur.png', 'score': 150},
-               {'path': 'web12/img/ball_pantera.png', 'score': 200})
-
+            {'path': 'web12/img/ball_lemur.png', 'score': 150},
+            {'path': 'web12/img/ball_pantera.png', 'score': 200})
 
 cart_speed = 10
 
 create_ball(balls_group)
+
 
 while True:
     for event in pygame.event.get():
@@ -66,14 +67,13 @@ while True:
 
     if keys[pygame.K_LEFT]:
         cart_rect.x -= cart_speed
-
     #контроль выезда за окно
         if cart_rect.x < 0:
             cart_rect.x = 0
 
     elif keys[pygame.K_RIGHT]:
         cart_rect.x += cart_speed
-
+    #контроль выезда за окно
         if cart_rect.x > WIDTH - cart_rect.width:
             cart_rect.x = WIDTH - cart_rect.width
 
